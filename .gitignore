@@ -3,3 +3,5 @@ obj_dir/
 *.out
 *.fst
 *.vcd
+sim_build/
+__pycache__/
