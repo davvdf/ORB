@@ -1,8 +1,8 @@
 module corner_checker
 #(
-    parameter byte unsigned THRESHOLD = 10,
-    parameter int unsigned DATA_WIDTH = 8,
-    parameter int unsigned CIRCUMFERENCE = 16 
+    parameter THRESHOLD = 10,
+    parameter DATA_WIDTH = 8,
+    parameter CIRCUMFERENCE = 16 
 )
 (
     input logic [DATA_WIDTH-1:0] candidate,
@@ -30,7 +30,7 @@ wire [CIRCUMFERENCE*2-1:0] b = { lighter, lighter };
 
 always_comb begin
     is_corner = 1'b0;
-    for ( int i = 0; i < CIRCUMFERENCE; i++ ) begin: hello3
+    for (int i = 0; i < CIRCUMFERENCE; i++ ) begin: hello3
         if ( &a[i +: 9] || &b[i +: 9] ) begin
             is_corner = 1'b1;
         end else begin
