@@ -3,9 +3,10 @@ module corners_tb;
   // -------------------------------------------------------------------------
   // Parameters
   // -------------------------------------------------------------------------
-  localparam byte unsigned THRESHOLD = 10;
-  localparam int           RING      = 16;   // pixels in Bresenham ring
-  localparam int           ARC       = 9;    // consecutive pixels required
+  localparam byte unsigned THRESHOLD  = 10;
+  localparam int           DATA_WIDTH = 8;
+  localparam int           RING       = 16;   // pixels in Bresenham ring
+  localparam int           ARC        = 9;    // consecutive pixels required
  
   // -------------------------------------------------------------------------
   // DUT ports
@@ -18,7 +19,10 @@ module corners_tb;
   // DUT instantiation
   // -------------------------------------------------------------------------
   corner_checker #(
-    .THRESHOLD (THRESHOLD)
+    .THRESHOLD (THRESHOLD),
+    .DATA_WIDTH(DATA_WIDTH),
+    .CIRCUMFERENCE(RING),
+    .CONTIGUOUS_PIXELS(ARC)
   ) dut (
     .candidate (candidate),
     .adjacent  (adjacent),
