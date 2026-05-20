@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1779196843" />
+    <testcase name="corner_checker_tb" classname="corner_checker_tb" file="/Users/apple/Documents/ORB/tb/corner_checker/corner_checker_tb.py" lineno="20" time="36653.69928717613" sim_time_ns="909.636" ratio_time="0.02481703123259513" />
+  </testsuite>
+</testsuites>
